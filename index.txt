@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Primeiro exemplo JavaScript</title>
+  <style type="text/css">
+  
+    section {
+      border: 1px dotted #00ff00;
+      padding: 20px;
+    }
+
+    article {
+      border: 1px dotted #0000ff;
+      padding: 20px;
+      margin: 10px;
+    }
+  
+  </style>
+</head>
+<body>
+
+    <section class="my">
+        <a href="#">Clique aqui</a>
+        <article id="primeiro">
+          Primeiro artigo  
+        </article>
+        <article class="my">
+          Segundo artigo  
+        </article>
+    </section>
+
+    <script type="text/javascript">
+
+      // console.log(document.getElementsByTagName('article'))
+      // console.log(document.getElementsByTagName('article')[0])
+
+      // console.log(document.getElementsByClassName('my'))
+      // console.log(document.getElementsByClassName('my')[0])
+
+      // document.getElementsByTagName('article')[1].innerHTML = 'Alterado via JavaScript'
+      // document.getElementsByTagName('article')[1].setAttribute('data-msg', 'Alterado via JS')
+      // document.getElementsByTagName('article')[1].style.padding = '100px';
+      
+      // var btn = document.createElement('a');
+      // btn.setAttribute('href', 'http://www.google.com');
+      // btn.setAttribute('target', '_blank');
+      // btn.innerText = 'Clique aqui';
+      
+      // document.getElementsByTagName('article')[1].appendChild(btn)
+
+    </script>
+  
+</body>
+</html>
