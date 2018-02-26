@@ -51,7 +51,71 @@
       
       // document.getElementsByTagName('article')[1].appendChild(btn)
 
+	  
+	 function myClick(){
+		var p = document.getElementsByTagName('p')
+		//console.log(p[0])
+		p[0].innerText = "Conteudo copiado"
+		p[1].innerText = "Click aqui para ver o que acontece!"
+	  }
+	  
+	 function tabela(v){
+		var col = document.getElementsByClassName('col1')
+		var col2 = document.getElementsByClassName('col2')
+		for (var i= 0; i < col.length; i++){
+			
+			if(v == 1){
+			col[i].style.backgroundColor = '#0000ff' 
+			col2[i].style.backgroundColor = '#ffffff' 
+			}
+			if(v == 2) {
+			col[i].style.backgroundColor = '#ffffff' 
+			col2[i].style.backgroundColor = '#00ff00' 
+			}
+		}
+   	}
     </script>
-  
+	
+	<section class="my">
+		<h1>Exercícios</h1>
+		<article class="my">
+			<p>Click aqui para ver o que acontece!<button onclick="myClick()">Click</button></p>
+			<p></p>
+		</article>
+		<article class="my">
+			<table border=1>
+				<thead>
+					<tr>
+						<th onclick='tabela(1)'>LIVRO</th>
+						<th onclick='tabela(2)'>QTD.PG</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class='col1'>meu livro</td>
+						<td class='col2'>120</td>
+					</tr>
+					<tr>
+						<td class='col1'>meu livro</td>
+						<td class='col2'>120</td>
+					</tr>
+					<tr>
+						<td class='col1'>meu livro</td>
+						<td class='col2'>120</td>
+					</tr>
+					<tr>
+						<td class='col1'>meu livro</td>
+						<td class='col2'>120</td>
+					</tr>
+					<tr>
+						<td class='col1'>meu livro</td>
+						<td class='col2'>120</td>
+					</tr>
+										
+				</tbody>
+			</table>
+		</article>
+	</section>
+
 </body>
 </html>
