@@ -1,121 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Primeiro exemplo JavaScript</title>
-  <style type="text/css">
-  
-    section {
-      border: 1px dotted #00ff00;
-      padding: 20px;
-    }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Primeiro exemplo JavaScript</title>
+	<style type="text/css">
 
-    article {
-      border: 1px dotted #0000ff;
-      padding: 20px;
-      margin: 10px;
-    }
-  
-  </style>
+		div {
+			border: 1px dotted #ff0000;
+			padding: 20px;
+		}
+
+		section {
+			border: 1px dotted #00ff00;
+			padding: 20px;
+		}
+
+		article {
+			border: 1px dotted #0000ff;
+			padding: 20px;
+			margin: 10px;
+		}
+
+	</style>
 </head>
 <body>
 
-    <section class="my">
-        <a href="#">Clique aqui</a>
-        <article id="primeiro">
-          Primeiro artigo  
-        </article>
-        <article class="my">
-          Segundo artigo  
-        </article>
-    </section>
-
-    <script type="text/javascript">
-
-      // console.log(document.getElementsByTagName('article'))
-      // console.log(document.getElementsByTagName('article')[0])
-
-      // console.log(document.getElementsByClassName('my'))
-      // console.log(document.getElementsByClassName('my')[0])
-
-      // document.getElementsByTagName('article')[1].innerHTML = 'Alterado via JavaScript'
-      // document.getElementsByTagName('article')[1].setAttribute('data-msg', 'Alterado via JS')
-      // document.getElementsByTagName('article')[1].style.padding = '100px';
-      
-      // var btn = document.createElement('a');
-      // btn.setAttribute('href', 'http://www.google.com');
-      // btn.setAttribute('target', '_blank');
-      // btn.innerText = 'Clique aqui';
-      
-      // document.getElementsByTagName('article')[1].appendChild(btn)
-
-	  
-	 function myClick(){
-		var p = document.getElementsByTagName('p')
-		//console.log(p[0])
-		p[0].innerText = "Conteudo copiado"
-		p[1].innerText = "Click aqui para ver o que acontece!"
-	  }
-	  
-	 function tabela(v){
-		var col = document.getElementsByClassName('col1')
-		var col2 = document.getElementsByClassName('col2')
-		for (var i= 0; i < col.length; i++){
-			
-			if(v == 1){
-			col[i].style.backgroundColor = '#0000ff' 
-			col2[i].style.backgroundColor = '#ffffff' 
-			}
-			if(v == 2) {
-			col[i].style.backgroundColor = '#ffffff' 
-			col2[i].style.backgroundColor = '#00ff00' 
-			}
-		}
-   	}
-    </script>
-	
+<div>
 	<section class="my">
-		<h1>Exercícios</h1>
-		<article class="my">
-			<p>Click aqui para ver o que acontece!<button onclick="myClick()">Click</button></p>
-			<p></p>
+		<article>
+			Primeiro artigo
 		</article>
 		<article class="my">
-			<table border=1>
-				<thead>
-					<tr>
-						<th onclick='tabela(1)'>LIVRO</th>
-						<th onclick='tabela(2)'>QTD.PG</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class='col1'>meu livro</td>
-						<td class='col2'>120</td>
-					</tr>
-					<tr>
-						<td class='col1'>meu livro</td>
-						<td class='col2'>120</td>
-					</tr>
-					<tr>
-						<td class='col1'>meu livro</td>
-						<td class='col2'>120</td>
-					</tr>
-					<tr>
-						<td class='col1'>meu livro</td>
-						<td class='col2'>120</td>
-					</tr>
-					<tr>
-						<td class='col1'>meu livro</td>
-						<td class='col2'>120</td>
-					</tr>
-										
-				</tbody>
-			</table>
+			Segundo artigo
 		</article>
 	</section>
+</div>
+
+<script>
+    function myClick() {
+        var p = document.getElementsByTagName('p')
+        //console.log(p[0])
+        p[0].innerText = "Conteudo copiado"
+        p[1].innerText = "Click aqui para ver o que acontece!"
+    }
+
+    function tabela(v) {
+        var col = document.getElementsByClassName('col1')
+        var col2 = document.getElementsByClassName('col2')
+        for (var i = 0; i < col.length; i++) {
+
+            if (v == 1) {
+                col[i].style.backgroundColor = '#5e74ee'
+                col2[i].style.backgroundColor = '#ffffff'
+            }
+            if (v == 2) {
+                col[i].style.backgroundColor = '#ffffff'
+                col2[i].style.backgroundColor = '#fff65b'
+            }
+        }
+    }
+
+    onload = function () {
+        document.getElementById('olamundo').innerHTML = "Olá Mundo!"
+        document.getElementsByTagName('p')[3].innerHTML = "Olá Mundo!"
+        document.getElementsByClassName('class')[0].innerHTML = "Olá Mundo!"
+        document.querySelectorAll('p')[5].innerHTML = "Olá Mundo!"
+
+        var title = document.getElementsByTagName('title')[0].innerHTML
+        document.getElementsByTagName('h1')[0].innerHTML = "Bem vindo a disciplina de Tecnologias para Internet II " + title
+
+        document.getElementsByTagName('p')[2].style.color = '#ff0000'
+        document.getElementsByTagName('p')[3].style.backgroundColor = '#f8ff58'
+        document.getElementsByTagName('p')[3].style.textAlign = 'center'
+        document.getElementsByTagName('p')[3].style.fontSize = '40px'
+    }
+
+    function myFuncion() {
+        document.getElementById('fun').remove()
+    }
+
+    function displayDate() {
+        alert(Date())
+    }
+
+    var z = 0
+    var span = document.getElementsByTagName('span')
+    function mouseover() {
+        document.getElementById("demo").innerHTML = z+=1
+    }
+
+</script>
+<h1></h1>
+
+<h1>Exercícios</h1>
+<article class="my">
+	<p>Click aqui para ver o que acontece!
+		<button onclick="myClick()">Click</button>
+	</p>
+	<p></p>
+</article>
+<article class="my">
+	<table border=1>
+		<thead>
+		<tr>
+			<th onclick='tabela(1)'>LIVRO</th>
+			<th onclick='tabela(2)'>QTD.PG</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td class='col1'>meu livro</td>
+			<td class='col2'>120</td>
+		</tr>
+		<tr>
+			<td class='col1'>meu livro</td>
+			<td class='col2'>120</td>
+		</tr>
+		<tr>
+			<td class='col1'>meu livro</td>
+			<td class='col2'>120</td>
+		</tr>
+		<tr>
+			<td class='col1'>meu livro</td>
+			<td class='col2'>120</td>
+		</tr>
+		<tr>
+			<td class='col1'>meu livro</td>
+			<td class='col2'>120</td>
+		</tr>
+
+		</tbody>
+	</table>
+</article>
+
+
+<article class="my">
+	<p id="olamundo"></p>
+	<p></p>
+	<p class="class"></p>
+	<p></p>
+	<p id='fun' onclick="myFuncion()">Click aqui</p>
+	<a href="#" onclick="displayDate()">Data</a>
+	<br>
+	<span onmousemove="mouseover()" id="demo">Mouse over me!</span>
+</article>
 
 </body>
 </html>
